@@ -16,5 +16,15 @@ namespace delimerced
         {
             InitializeComponent();
         }
+
+        private void lblEvento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpriceE_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
