@@ -1,0 +1,5 @@
+C:\hoysi\delimerced2\delimerced2\bin\Debug\delimerced2.exe.config
+C:\hoysi\delimerced2\delimerced2\obj\Debug\delimerced2.csprojResolveAssemblyReference.cache
+C:\hoysi\delimerced2\delimerced2\obj\Debug\delimerced2.Eventos.eventos.resources
+C:\hoysi\delimerced2\delimerced2\obj\Debug\delimerced2.Properties.Resources.resources
+C:\hoysi\delimerced2\delimerced2\obj\Debug\delimerced2.csproj.GenerateResource.Cache
