@@ -74,6 +74,7 @@
             // 
             this.txt_password.Location = new System.Drawing.Point(121, 85);
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(128, 20);
             this.txt_password.TabIndex = 4;
             // 
@@ -98,9 +99,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_login";
             this.Text = "form_login";
+            this.Load += new System.EventHandler(this.form_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

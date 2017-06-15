@@ -47,5 +47,10 @@ namespace delimerced
             }
             connection.Close();
         }
+
+        private void form_login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

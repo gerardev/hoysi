@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace delimerced
+namespace delimerced.pedidos
 {
-    public partial class form_inicio : Form
+    public partial class form_pedidos : Form
     {
-        public form_inicio()
+        public form_pedidos()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            form_evento evento = new form_evento();
-            evento.Show();
         }
     }
 }
