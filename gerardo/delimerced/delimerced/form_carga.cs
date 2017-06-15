@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace delimerced
 {
-    public partial class Form1 : Form
+    public partial class form_carga : Form
     {
-        public Form1()
+        public form_carga()
         {
             InitializeComponent();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            form_login login = new form_login();
+            login.Show();
+            this.Hide();
+            timer.Enabled = false;
         }
     }
 }
