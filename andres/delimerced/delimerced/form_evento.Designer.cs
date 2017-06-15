@@ -93,6 +93,7 @@
             this.txtpriceE.Size = new System.Drawing.Size(64, 20);
             this.txtpriceE.TabIndex = 5;
             this.txtpriceE.TextChanged += new System.EventHandler(this.txtpriceE_TextChanged);
+            this.txtpriceE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpriceE_KeyPress);
             // 
             // label4
             // 
