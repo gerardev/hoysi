@@ -16,5 +16,20 @@ namespace delimerced
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnameE_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpriceE_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
