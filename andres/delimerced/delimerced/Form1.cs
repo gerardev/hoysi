@@ -16,5 +16,11 @@ namespace delimerced
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form_evento evento = new form_evento();
+            evento.Show();
+        }
     }
 }
