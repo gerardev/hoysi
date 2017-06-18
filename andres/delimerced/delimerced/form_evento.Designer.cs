@@ -38,22 +38,25 @@
             this.btncancel = new System.Windows.Forms.Button();
             this.btnreportE = new System.Windows.Forms.Button();
             this.eventoDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnsaveE = new System.Windows.Forms.Button();
-            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.precioTextBox = new System.Windows.Forms.TextBox();
-            this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.delimercedDataSet = new delimerced.delimercedDataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventoTableAdapter = new delimerced.delimercedDataSetTableAdapters.eventoTableAdapter();
-            this.tableAdapterManager = new delimerced.delimercedDataSetTableAdapters.TableAdapterManager();
+            this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.delimercedDataSet = new delimerced.delimercedDataSet();
+            this.btnsaveE = new System.Windows.Forms.Button();
+            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.precioTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.cbtype = new System.Windows.Forms.ComboBox();
+            this.eventoTableAdapter = new delimerced.delimercedDataSetTableAdapters.eventoTableAdapter();
+            this.tableAdapterManager = new delimerced.delimercedDataSetTableAdapters.TableAdapterManager();
+            this.btnDeleteE = new System.Windows.Forms.Button();
+            this.id_eventoTextBox = new System.Windows.Forms.TextBox();
+            this.btnEditE = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eventoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delimercedDataSet)).BeginInit();
@@ -72,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(383, 23);
+            this.label2.Location = new System.Drawing.Point(444, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 2;
@@ -116,7 +119,7 @@
             // 
             // btncancel
             // 
-            this.btncancel.Location = new System.Drawing.Point(539, 379);
+            this.btncancel.Location = new System.Drawing.Point(581, 379);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(75, 23);
             this.btncancel.TabIndex = 11;
@@ -149,42 +152,6 @@
             this.eventoDataGridView.Name = "eventoDataGridView";
             this.eventoDataGridView.Size = new System.Drawing.Size(636, 155);
             this.eventoDataGridView.TabIndex = 14;
-            // 
-            // btnsaveE
-            // 
-            this.btnsaveE.Location = new System.Drawing.Point(36, 362);
-            this.btnsaveE.Name = "btnsaveE";
-            this.btnsaveE.Size = new System.Drawing.Size(75, 23);
-            this.btnsaveE.TabIndex = 15;
-            this.btnsaveE.Text = "Guardar evento";
-            this.btnsaveE.UseVisualStyleBackColor = true;
-            this.btnsaveE.Click += new System.EventHandler(this.btnsaveE_Click);
-            // 
-            // fechaDateTimePicker
-            // 
-            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.eventoBindingSource, "fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(386, 39);
-            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fechaDateTimePicker.TabIndex = 16;
-            // 
-            // precioTextBox
-            // 
-            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(36, 112);
-            this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(100, 20);
-            this.precioTextBox.TabIndex = 17;
-            // 
-            // eventoBindingSource
-            // 
-            this.eventoBindingSource.DataMember = "evento";
-            this.eventoBindingSource.DataSource = this.delimercedDataSet;
-            // 
-            // delimercedDataSet
-            // 
-            this.delimercedDataSet.DataSetName = "delimercedDataSet";
-            this.delimercedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -222,6 +189,69 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "direccion";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
+            // eventoBindingSource
+            // 
+            this.eventoBindingSource.DataMember = "evento";
+            this.eventoBindingSource.DataSource = this.delimercedDataSet;
+            // 
+            // delimercedDataSet
+            // 
+            this.delimercedDataSet.DataSetName = "delimercedDataSet";
+            this.delimercedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnsaveE
+            // 
+            this.btnsaveE.Location = new System.Drawing.Point(36, 362);
+            this.btnsaveE.Name = "btnsaveE";
+            this.btnsaveE.Size = new System.Drawing.Size(92, 23);
+            this.btnsaveE.TabIndex = 15;
+            this.btnsaveE.Text = "Guardar evento";
+            this.btnsaveE.UseVisualStyleBackColor = true;
+            this.btnsaveE.Click += new System.EventHandler(this.btnsaveE_Click);
+            // 
+            // fechaDateTimePicker
+            // 
+            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.eventoBindingSource, "fecha", true));
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(447, 42);
+            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(225, 20);
+            this.fechaDateTimePicker.TabIndex = 16;
+            // 
+            // precioTextBox
+            // 
+            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "precio", true));
+            this.precioTextBox.Location = new System.Drawing.Point(36, 112);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.precioTextBox.TabIndex = 17;
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(36, 42);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(392, 20);
+            this.nombreTextBox.TabIndex = 18;
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "direccion", true));
+            this.direccionTextBox.Location = new System.Drawing.Point(323, 112);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.Size = new System.Drawing.Size(349, 20);
+            this.direccionTextBox.TabIndex = 20;
+            // 
+            // cbtype
+            // 
+            this.cbtype.FormattingEnabled = true;
+            this.cbtype.Items.AddRange(new object[] {
+            "Servicio completo",
+            "Solo comida"});
+            this.cbtype.Location = new System.Drawing.Point(163, 110);
+            this.cbtype.Name = "cbtype";
+            this.cbtype.Size = new System.Drawing.Size(121, 21);
+            this.cbtype.TabIndex = 21;
+            // 
             // eventoTableAdapter
             // 
             this.eventoTableAdapter.ClearBeforeFill = true;
@@ -241,38 +271,43 @@
             this.tableAdapterManager.UpdateOrder = delimerced.delimercedDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = null;
             // 
-            // nombreTextBox
+            // btnDeleteE
             // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(36, 42);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(283, 20);
-            this.nombreTextBox.TabIndex = 18;
+            this.btnDeleteE.Location = new System.Drawing.Point(36, 391);
+            this.btnDeleteE.Name = "btnDeleteE";
+            this.btnDeleteE.Size = new System.Drawing.Size(92, 23);
+            this.btnDeleteE.TabIndex = 22;
+            this.btnDeleteE.Text = "Borrar evento";
+            this.btnDeleteE.UseVisualStyleBackColor = true;
+            this.btnDeleteE.Click += new System.EventHandler(this.btnDeleteE_Click);
             // 
-            // direccionTextBox
+            // id_eventoTextBox
             // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(323, 112);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(201, 20);
-            this.direccionTextBox.TabIndex = 20;
+            this.id_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "id_evento", true));
+            this.id_eventoTextBox.Location = new System.Drawing.Point(1, 0);
+            this.id_eventoTextBox.Name = "id_eventoTextBox";
+            this.id_eventoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.id_eventoTextBox.TabIndex = 23;
+            this.id_eventoTextBox.Visible = false;
             // 
-            // cbtype
+            // btnEditE
             // 
-            this.cbtype.FormattingEnabled = true;
-            this.cbtype.Items.AddRange(new object[] {
-            "Servicio completo",
-            "Solo comida"});
-            this.cbtype.Location = new System.Drawing.Point(163, 110);
-            this.cbtype.Name = "cbtype";
-            this.cbtype.Size = new System.Drawing.Size(121, 21);
-            this.cbtype.TabIndex = 21;
+            this.btnEditE.Location = new System.Drawing.Point(134, 362);
+            this.btnEditE.Name = "btnEditE";
+            this.btnEditE.Size = new System.Drawing.Size(92, 23);
+            this.btnEditE.TabIndex = 24;
+            this.btnEditE.Text = "Editar evento";
+            this.btnEditE.UseVisualStyleBackColor = true;
+            this.btnEditE.Click += new System.EventHandler(this.btnEditE_Click);
             // 
             // form_evento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 448);
+            this.ClientSize = new System.Drawing.Size(692, 469);
+            this.Controls.Add(this.btnEditE);
+            this.Controls.Add(this.id_eventoTextBox);
+            this.Controls.Add(this.btnDeleteE);
             this.Controls.Add(this.cbtype);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(this.nombreTextBox);
@@ -326,5 +361,8 @@
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox direccionTextBox;
         private System.Windows.Forms.ComboBox cbtype;
+        private System.Windows.Forms.Button btnDeleteE;
+        private System.Windows.Forms.TextBox id_eventoTextBox;
+        private System.Windows.Forms.Button btnEditE;
     }
 }

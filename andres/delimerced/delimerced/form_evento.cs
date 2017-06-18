@@ -68,5 +68,13 @@ namespace delimerced
             this.eventoTableAdapter.Insertar(nombreTextBox.Text, date, precio, cbtype.Text, direccionTextBox.Text);
             this.eventoTableAdapter.Fill(this.delimercedDataSet.evento);
         }
+
+        private void btnDeleteE_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnEditE_Click(object sender, EventArgs e)
+        {   
+        }
     }
 }
