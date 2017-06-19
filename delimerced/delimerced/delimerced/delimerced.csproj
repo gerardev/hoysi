@@ -93,6 +93,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Eventos\form_evento.resx">
+      <DependentUpon>form_evento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form_carga.resx">
       <DependentUpon>form_carga.cs</DependentUpon>
     </EmbeddedResource>

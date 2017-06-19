@@ -65,7 +65,7 @@ namespace delimerced
         {
             decimal precio = Convert.ToDecimal(precioTextBox.Text);
             DateTime date = Convert.ToDateTime(fechaDateTimePicker.Text);
-            this.eventoTableAdapter.Insertar(nombreTextBox.Text, date, precio, cbtype.Text, direccionTextBox.Text);
+            //this.eventoTableAdapter.Insertar(nombreTextBox.Text, date, precio, cbtype.Text, direccionTextBox.Text);
             this.eventoTableAdapter.Fill(this.delimercedDataSet.evento);
         }
 
