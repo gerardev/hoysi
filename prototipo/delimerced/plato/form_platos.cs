@@ -87,5 +87,10 @@ namespace delimerced.Platos
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

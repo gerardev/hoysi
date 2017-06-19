@@ -47,16 +47,15 @@
             this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.delimercedDataSet = new delimerced.delimercedDataSet();
             this.btnsaveE = new System.Windows.Forms.Button();
-            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.precioTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.cbtype = new System.Windows.Forms.ComboBox();
+            this.cbTypeE = new System.Windows.Forms.ComboBox();
             this.eventoTableAdapter = new delimerced.delimercedDataSetTableAdapters.eventoTableAdapter();
             this.tableAdapterManager = new delimerced.delimercedDataSetTableAdapters.TableAdapterManager();
             this.btnDeleteE = new System.Windows.Forms.Button();
-            this.id_eventoTextBox = new System.Windows.Forms.TextBox();
             this.btnEditE = new System.Windows.Forms.Button();
+            this.txtNameE = new System.Windows.Forms.TextBox();
+            this.dateE = new System.Windows.Forms.DateTimePicker();
+            this.txtPriceE = new System.Windows.Forms.TextBox();
+            this.txtAddressE = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.eventoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delimercedDataSet)).BeginInit();
@@ -209,48 +208,16 @@
             this.btnsaveE.UseVisualStyleBackColor = true;
             this.btnsaveE.Click += new System.EventHandler(this.btnsaveE_Click);
             // 
-            // fechaDateTimePicker
+            // cbTypeE
             // 
-            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.eventoBindingSource, "fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(447, 42);
-            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(225, 20);
-            this.fechaDateTimePicker.TabIndex = 16;
-            // 
-            // precioTextBox
-            // 
-            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(36, 112);
-            this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(100, 20);
-            this.precioTextBox.TabIndex = 17;
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(36, 42);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(392, 20);
-            this.nombreTextBox.TabIndex = 18;
-            // 
-            // direccionTextBox
-            // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(323, 112);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(349, 20);
-            this.direccionTextBox.TabIndex = 20;
-            // 
-            // cbtype
-            // 
-            this.cbtype.FormattingEnabled = true;
-            this.cbtype.Items.AddRange(new object[] {
+            this.cbTypeE.FormattingEnabled = true;
+            this.cbTypeE.Items.AddRange(new object[] {
             "Servicio completo",
             "Solo comida"});
-            this.cbtype.Location = new System.Drawing.Point(163, 110);
-            this.cbtype.Name = "cbtype";
-            this.cbtype.Size = new System.Drawing.Size(121, 21);
-            this.cbtype.TabIndex = 21;
+            this.cbTypeE.Location = new System.Drawing.Point(163, 110);
+            this.cbTypeE.Name = "cbTypeE";
+            this.cbTypeE.Size = new System.Drawing.Size(121, 21);
+            this.cbTypeE.TabIndex = 21;
             // 
             // eventoTableAdapter
             // 
@@ -281,15 +248,6 @@
             this.btnDeleteE.UseVisualStyleBackColor = true;
             this.btnDeleteE.Click += new System.EventHandler(this.btnDeleteE_Click);
             // 
-            // id_eventoTextBox
-            // 
-            this.id_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventoBindingSource, "id_evento", true));
-            this.id_eventoTextBox.Location = new System.Drawing.Point(1, 0);
-            this.id_eventoTextBox.Name = "id_eventoTextBox";
-            this.id_eventoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.id_eventoTextBox.TabIndex = 23;
-            this.id_eventoTextBox.Visible = false;
-            // 
             // btnEditE
             // 
             this.btnEditE.Location = new System.Drawing.Point(134, 362);
@@ -300,19 +258,46 @@
             this.btnEditE.UseVisualStyleBackColor = true;
             this.btnEditE.Click += new System.EventHandler(this.btnEditE_Click);
             // 
+            // txtNameE
+            // 
+            this.txtNameE.Location = new System.Drawing.Point(36, 40);
+            this.txtNameE.Name = "txtNameE";
+            this.txtNameE.Size = new System.Drawing.Size(344, 20);
+            this.txtNameE.TabIndex = 25;
+            // 
+            // dateE
+            // 
+            this.dateE.Location = new System.Drawing.Point(438, 39);
+            this.dateE.Name = "dateE";
+            this.dateE.Size = new System.Drawing.Size(218, 20);
+            this.dateE.TabIndex = 26;
+            // 
+            // txtPriceE
+            // 
+            this.txtPriceE.Location = new System.Drawing.Point(36, 110);
+            this.txtPriceE.Name = "txtPriceE";
+            this.txtPriceE.Size = new System.Drawing.Size(100, 20);
+            this.txtPriceE.TabIndex = 27;
+            // 
+            // txtAddressE
+            // 
+            this.txtAddressE.Location = new System.Drawing.Point(328, 110);
+            this.txtAddressE.Name = "txtAddressE";
+            this.txtAddressE.Size = new System.Drawing.Size(328, 20);
+            this.txtAddressE.TabIndex = 28;
+            // 
             // form_evento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 469);
+            this.Controls.Add(this.txtAddressE);
+            this.Controls.Add(this.txtPriceE);
+            this.Controls.Add(this.dateE);
+            this.Controls.Add(this.txtNameE);
             this.Controls.Add(this.btnEditE);
-            this.Controls.Add(this.id_eventoTextBox);
             this.Controls.Add(this.btnDeleteE);
-            this.Controls.Add(this.cbtype);
-            this.Controls.Add(this.direccionTextBox);
-            this.Controls.Add(this.nombreTextBox);
-            this.Controls.Add(this.precioTextBox);
-            this.Controls.Add(this.fechaDateTimePicker);
+            this.Controls.Add(this.cbTypeE);
             this.Controls.Add(this.btnsaveE);
             this.Controls.Add(this.eventoDataGridView);
             this.Controls.Add(this.btnreportE);
@@ -356,13 +341,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Button btnsaveE;
-        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
-        private System.Windows.Forms.TextBox precioTextBox;
-        private System.Windows.Forms.TextBox nombreTextBox;
-        private System.Windows.Forms.TextBox direccionTextBox;
-        private System.Windows.Forms.ComboBox cbtype;
+        private System.Windows.Forms.ComboBox cbTypeE;
         private System.Windows.Forms.Button btnDeleteE;
-        private System.Windows.Forms.TextBox id_eventoTextBox;
         private System.Windows.Forms.Button btnEditE;
+        private System.Windows.Forms.TextBox txtNameE;
+        private System.Windows.Forms.DateTimePicker dateE;
+        private System.Windows.Forms.TextBox txtPriceE;
+        private System.Windows.Forms.TextBox txtAddressE;
     }
 }
