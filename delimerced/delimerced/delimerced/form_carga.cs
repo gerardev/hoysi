@@ -19,9 +19,9 @@ namespace delimerced
 
         private void timer_Tick(object sender, EventArgs e)
         {
+            this.Hide();
             form_login login = new form_login();
             login.Show();
-            this.Hide();
             timer.Enabled = false;
         }
     }

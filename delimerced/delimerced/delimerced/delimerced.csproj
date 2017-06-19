@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\class_login.cs" />
+    <Compile Include="Clases\class_platos.cs" />
+    <Compile Include="Clases\conexion.cs" />
+    <Compile Include="Clases\validaciones.cs" />
+    <Compile Include="delimercedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>delimercedDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Eventos\form_evento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +85,12 @@
     <Compile Include="pedidos\form_pedidos.Designer.cs">
       <DependentUpon>form_pedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Platos\form_platos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Platos\form_platos.Designer.cs">
+      <DependentUpon>form_platos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="form_carga.resx">
@@ -90,6 +105,9 @@
     <EmbeddedResource Include="pedidos\form_pedidos.resx">
       <DependentUpon>form_pedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Platos\form_platos.resx">
+      <DependentUpon>form_platos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -99,6 +117,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="delimercedDataSet.xsc">
+      <DependentUpon>delimercedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="delimercedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>delimercedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="delimercedDataSet.xss">
+      <DependentUpon>delimercedDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,6 +141,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="delimerced.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -22,5 +22,11 @@ namespace delimerced
             form_evento evento = new form_evento();
             evento.Show();
         }
+
+        private void btn_platos_Click(object sender, EventArgs e)
+        {
+            Platos.form_platos platos = new Platos.form_platos();
+            platos.Show();
+        }
     }
 }

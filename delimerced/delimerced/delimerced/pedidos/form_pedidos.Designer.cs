@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(819, 449);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_pedidos";
-            this.Text = "Form1";
+            this.Text = "DELI MERCED";
             this.ResumeLayout(false);
 
         }

@@ -13,7 +13,6 @@ namespace delimerced
 {
     public partial class form_login : Form
     {
-        OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:/hoysi/delimerced/delimerced/delimerced/bd/delimerced.mdb;Persist Security Info=True");
         public form_login()
         {
             InitializeComponent();
@@ -21,34 +20,34 @@ namespace delimerced
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = connection;
-            command.CommandText = "select * from usuarios where usuario = '" + txt_user.Text + "' and pass = '" + txt_password.Text + "'";
-            OleDbDataReader reader = command.ExecuteReader();
-            int count = 0;
-            while (reader.Read())
+            Clases.class_login log = new Clases.class_login();
+            if (log.log(txt_user.Text, txt_password.Text) == true)
             {
-                count++;
-            }
-            if (count == 1)
-            {
-                form_inicio iniciar = new form_inicio();
-                iniciar.Show();
-                this.Hide();
+                this.Close();
+                form_inicio inicio = new form_inicio();
+                inicio.Show();
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrecta",
-                        "DELI MERCED",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning
-                );
+                            "DELI MERCED",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning
+                    );
             }
-            connection.Close();
         }
 
         private void form_login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_user_TextChanged(object sender, EventArgs e)
         {
 
         }
