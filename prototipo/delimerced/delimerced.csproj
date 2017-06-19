@@ -103,6 +103,9 @@
     <EmbeddedResource Include="form_login.resx">
       <DependentUpon>form_login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="plato\form_platos.resx">
+      <DependentUpon>form_platos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

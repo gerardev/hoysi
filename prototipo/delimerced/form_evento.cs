@@ -109,7 +109,23 @@ namespace delimerced
         }
 
         private void btnEditE_Click(object sender, EventArgs e)
-        {   
+        {
+            try
+            {
+                OleDbDataAdapter adapter = new OleDbDataAdapter(query, cn);
+                OleDbCommandBuilder cmad = new OleDbCommandBuilder(adapter);
+                changes = ds.GetChanges();
+                if (changes != null)
+                {
+                    adapter.Update(ds.Tables[0]);
+                }
+                ds.AcceptChanges();
+                MessageBox.Show("Cambios guardados exitosamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

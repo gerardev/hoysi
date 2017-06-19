@@ -29,7 +29,7 @@ namespace delimerced.Clases
                                 if (vali.notempty(direc) == true)
                                 {
                                     DateTime fecha = Convert.ToDateTime(date);
-                                    double precio = Convert.ToDouble(date);
+                                    double precio = Convert.ToDouble(price);
                                     using (OleDbCommand command = new OleDbCommand())
                                     {
                                         command.Connection = cn;
@@ -37,9 +37,9 @@ namespace delimerced.Clases
 
                                         command.Parameters.AddWithValue("@nombre", name);
 
-                                        command.Parameters.AddWithValue("@fecha", date);
+                                        command.Parameters.AddWithValue("@fecha", fecha);
 
-                                        command.Parameters.AddWithValue("@precio", price);
+                                        command.Parameters.AddWithValue("@precio", precio);
 
                                         command.Parameters.AddWithValue("@tipo", type);
 
