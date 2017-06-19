@@ -44,6 +44,7 @@ namespace delimerced.Platos
                 txt_name.Text = "";
                 txt_desc.Text = "";
                 txt_price.Text = "";
+                filldata();
             }
             else
             {
@@ -62,12 +63,18 @@ namespace delimerced.Platos
             {
                 using (adapter)
                 {
+                    ds.Clear();
                     adapter.Fill(ds);
                     dataGridView1.DataSource = ds.Tables[0];
                 }
             }
         }
-
+        public void limpiar()
+        {
+            txt_name.Text = "";
+            txt_desc.Text = "";
+            txt_price.Text = "";
+        }
         private void btn_update_Click(object sender, EventArgs e)
         {
             try
@@ -80,12 +87,44 @@ namespace delimerced.Platos
                     adapter.Update(ds.Tables[0]);
                 }
                 ds.AcceptChanges();
-                MessageBox.Show("Cambios guardados exitosamente","DELI MERCED", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Cambios guardados exitosamente.","DELI MERCED", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            OleDbConnection cn = new Clases.conexion().newcon();
+            string id_pl = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            string sql = null;
+            try
+            {
+                cn.Open();
+                OleDbCommand cm = new OleDbCommand("delete from plato where id_plato=?");
+                cm.Parameters.AddWithValue("id_plato", id_pl);
+                cm.Connection = cn;
+                cm.ExecuteNonQuery();
+                MessageBox.Show("Plato eliminado correctamente!", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "DELI MERCED");
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+
+        }
+
+        private void txt_clear_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }
