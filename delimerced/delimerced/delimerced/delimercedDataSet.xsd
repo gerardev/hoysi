@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="delimercedcon" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="delimercedcon (Settings)" PropertyReference="ApplicationSettings.delimerced.Properties.Settings.GlobalReference.Default.delimercedcon" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="delimercedConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="delimercedConnectionString (Settings)" PropertyReference="ApplicationSettings.delimerced.Properties.Settings.GlobalReference.Default.delimercedConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comprasTableAdapter" GeneratorDataComponentClassName="comprasTableAdapter" Name="compras" UserDataComponentName="comprasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="compras" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="compras" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `compras` WHERE ((`id_compra` = ?) AND ((? = 1 AND `fecha` IS NULL) OR (`fecha` = ?)) AND ((? = 1 AND `tipo` IS NULL) OR (`tipo` = ?)) AND ((? = 1 AND `monto` IS NULL) OR (`monto` = ?)) AND ((? = 1 AND `descripcion` IS NULL) OR (`descripcion` = ?)))</CommandText>
@@ -76,7 +76,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="detalle_eventoTableAdapter" GeneratorDataComponentClassName="detalle_eventoTableAdapter" Name="detalle_evento" UserDataComponentName="detalle_eventoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="detalle_evento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="detalle_evento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `detalle_evento` WHERE ((`Id_detalle` = ?) AND ((? = 1 AND `id_evento` IS NULL) OR (`id_evento` = ?)) AND ((? = 1 AND `id_platillo` IS NULL) OR (`id_platillo` = ?)) AND ((? = 1 AND `cantidad` IS NULL) OR (`cantidad` = ?)))</CommandText>
@@ -136,7 +136,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="detalle_pedidoTableAdapter" GeneratorDataComponentClassName="detalle_pedidoTableAdapter" Name="detalle_pedido" UserDataComponentName="detalle_pedidoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="detalle_pedido" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="detalle_pedido" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO `detalle_pedido` (`id_pedido`, `id_platillo`) VALUES (?, ?)</CommandText>
@@ -162,7 +162,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="detalle_platTableAdapter" GeneratorDataComponentClassName="detalle_platTableAdapter" Name="detalle_plat" UserDataComponentName="detalle_platTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="detalle_plat" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="detalle_plat" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `detalle_plat` WHERE ((`Id_platillo` = ?) AND ((? = 1 AND `id_plato` IS NULL) OR (`id_plato` = ?)) AND ((? = 1 AND `id_extra` IS NULL) OR (`id_extra` = ?)))</CommandText>
@@ -215,7 +215,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="detalle_platoTableAdapter" GeneratorDataComponentClassName="detalle_platoTableAdapter" Name="detalle_plato" UserDataComponentName="detalle_platoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="detalle_plato" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="detalle_plato" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `detalle_plato` WHERE ((`id_platillo` = ?) AND ((? = 1 AND `id_plato` IS NULL) OR (`id_plato` = ?)) AND ((? = 1 AND `id_extra` IS NULL) OR (`id_extra` = ?)))</CommandText>
@@ -270,7 +270,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="eventoTableAdapter" GeneratorDataComponentClassName="eventoTableAdapter" Name="evento" UserDataComponentName="eventoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="evento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="evento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `evento` WHERE ((`id_evento` = ?) AND ((? = 1 AND `nombre` IS NULL) OR (`nombre` = ?)) AND ((? = 1 AND `fecha` IS NULL) OR (`fecha` = ?)) AND ((? = 1 AND `precio` IS NULL) OR (`precio` = ?)) AND ((? = 1 AND `tipo` IS NULL) OR (`tipo` = ?)))</CommandText>
@@ -336,11 +336,28 @@
               <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
               <Mapping SourceColumn="direccion" DataSetColumn="direccion" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Insertar" Modifier="Public" Name="Insertar" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Insertar">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO evento
+                         (nombre, fecha, precio, tipo, direccion)
+VALUES        (?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="nombre" DataSourceName="evento" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="nombre" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="fecha" DataSourceName="evento" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="fecha" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="precio" DataSourceName="evento" DataTypeServer="DbType.Currency" DbType="Decimal" Direction="Input" ParameterName="precio" Precision="19" ProviderType="Currency" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="tipo" DataSourceName="evento" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="tipo" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="tipo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param5" ColumnName="direccion" DataSourceName="evento" DataTypeServer="DbType.StringFixedLength" DbType="String" Direction="Input" ParameterName="direccion" Precision="0" ProviderType="WChar" Scale="0" Size="1024" SourceColumn="direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="extrasTableAdapter" GeneratorDataComponentClassName="extrasTableAdapter" Name="extras" UserDataComponentName="extrasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="extras" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="extras" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `extras` WHERE ((`Id_extra` = ?) AND ((? = 1 AND `nombre` IS NULL) OR (`nombre` = ?)) AND ((? = 1 AND `descripcion` IS NULL) OR (`descripcion` = ?)) AND ((? = 1 AND `precio` IS NULL) OR (`precio` = ?)))</CommandText>
@@ -400,7 +417,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pedidoTableAdapter" GeneratorDataComponentClassName="pedidoTableAdapter" Name="pedido" UserDataComponentName="pedidoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="pedido" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="pedido" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `pedido` WHERE ((`id_pedido` = ?) AND ((? = 1 AND `tipo` IS NULL) OR (`tipo` = ?)) AND ((? = 1 AND `cliente` IS NULL) OR (`cliente` = ?)) AND ((? = 1 AND `direccion` IS NULL) OR (`direccion` = ?)) AND ((? = 1 AND `fecha` IS NULL) OR (`fecha` = ?)))</CommandText>
@@ -467,7 +484,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="platoTableAdapter" GeneratorDataComponentClassName="platoTableAdapter" Name="plato" UserDataComponentName="platoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="plato" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="plato" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `plato` WHERE ((`Id_plato` = ?) AND ((? = 1 AND `nombre` IS NULL) OR (`nombre` = ?)) AND ((? = 1 AND `descripcion` IS NULL) OR (`descripcion` = ?)) AND ((? = 1 AND `precio` IS NULL) OR (`precio` = ?)))</CommandText>
@@ -523,28 +540,11 @@
               <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
               <Mapping SourceColumn="precio" DataSetColumn="precio" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="plato" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id_plato, nombre, descripcion, precio FROM plato</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="plato" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id_plato, nombre, descripcion, precio FROM plato</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usuariosTableAdapter" GeneratorDataComponentClassName="usuariosTableAdapter" Name="usuarios" UserDataComponentName="usuariosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="delimercedcon (Settings)" DbObjectName="usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="delimercedConnectionString (Settings)" DbObjectName="usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `usuarios` WHERE ((`id_usuario` = ?) AND ((? = 1 AND `nombre` IS NULL) OR (`nombre` = ?)) AND ((? = 1 AND `usuario` IS NULL) OR (`usuario` = ?)) AND ((? = 1 AND `pass` IS NULL) OR (`pass` = ?)))</CommandText>
