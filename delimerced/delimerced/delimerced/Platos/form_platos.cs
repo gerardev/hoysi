@@ -16,8 +16,6 @@ namespace delimerced.Platos
     {
         string query = "SELECT * FROM plato";
         OleDbConnection cn = new Clases.conexion().newcon();
-        
-        OleDbCommandBuilder oledbCmdBuilder;
         DataSet ds = new DataSet();
         DataSet changes;
 
@@ -41,9 +39,7 @@ namespace delimerced.Platos
             if (rt == "true")
             {
                 MessageBox.Show("Plato Ingresado Correctamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_name.Text = "";
-                txt_desc.Text = "";
-                txt_price.Text = "";
+                limpiar();
                 filldata();
             }
             else
@@ -98,28 +94,19 @@ namespace delimerced.Platos
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            OleDbConnection cn = new Clases.conexion().newcon();
-            string id_pl = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            string sql = null;
-            try
+            int id_pl = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            Clases.class_platos platos = new Clases.class_platos();
+
+
+            if (platos.borrar_plato(id_pl) == true)
             {
-                cn.Open();
-                OleDbCommand cm = new OleDbCommand("delete from plato where id_plato=?");
-                cm.Parameters.AddWithValue("id_plato", id_pl);
-                cm.Connection = cn;
-                cm.ExecuteNonQuery();
                 MessageBox.Show("Plato eliminado correctamente!", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                filldata();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString(), "DELI MERCED");
+                MessageBox.Show("Ocurrio un error. Intentelo de nuevo", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            finally
-            {
-                cn.Close();
-            }
-
-
         }
 
         private void txt_clear_Click(object sender, EventArgs e)
