@@ -16,7 +16,7 @@ namespace delimerced.Platos
     {
         string query = "SELECT * FROM plato";
         OleDbConnection cn = new Clases.conexion().newcon();
-        OleDbDataAdapter adapter = new OleDbDataAdapter(query, cn)
+        //OleDbDataAdapter adapter = new OleDbDataAdapter(query, cn);
         //OleDbCommandBuilder oledbCmdBuilder =;
         DataSet ds = new DataSet();
         DataSet changes;
