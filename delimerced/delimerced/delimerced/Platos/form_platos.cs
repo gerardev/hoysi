@@ -16,7 +16,7 @@ namespace delimerced.Platos
     {
         string query = "SELECT * FROM plato";
         OleDbConnection cn = new Clases.conexion().newcon();
-        //OleDbDataAdapter adapter = new OleDbDataAdapter(query, cn);
+        
         //OleDbCommandBuilder oledbCmdBuilder =;
         DataSet ds = new DataSet();
         DataSet changes;
@@ -58,8 +58,8 @@ namespace delimerced.Platos
         }
         public void filldata()
         {
-            
 
+            OleDbDataAdapter adapter = new OleDbDataAdapter(query, cn);
             using (OleDbConnection cn = new Clases.conexion().newcon())
             {
                 using (adapter)
@@ -74,6 +74,7 @@ namespace delimerced.Platos
         {
             try
             {
+                OleDbDataAdapter adapter = new OleDbDataAdapter(query, cn);
                 OleDbCommandBuilder cmad = new OleDbCommandBuilder(adapter);
                 changes = ds.GetChanges();
                 if (changes != null)

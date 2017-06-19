@@ -7264,7 +7264,8 @@ namespace delimerced.delimercedDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_evento, nombre, fecha, precio, tipo, direccion FROM evento";
+            this._commandCollection[0].CommandText = "SELECT        id_evento, nombre, fecha, precio, tipo, direccion\r\nFROM            " +
+                "evento";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;

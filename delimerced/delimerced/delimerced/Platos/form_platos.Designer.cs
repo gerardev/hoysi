@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 403);
+            this.ClientSize = new System.Drawing.Size(582, 244);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_new);

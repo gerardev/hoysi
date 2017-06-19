@@ -148,7 +148,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.eventoDataGridView.DataSource = this.eventoBindingSource;
-            this.eventoDataGridView.Location = new System.Drawing.Point(36, 181);
+            this.eventoDataGridView.Location = new System.Drawing.Point(36, 189);
             this.eventoDataGridView.Name = "eventoDataGridView";
             this.eventoDataGridView.Size = new System.Drawing.Size(636, 155);
             this.eventoDataGridView.TabIndex = 14;
