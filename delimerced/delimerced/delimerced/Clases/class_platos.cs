@@ -77,5 +77,26 @@ namespace delimerced.Clases
                 return "false";
             }
         }
+        public bool borrar_plato(int id)
+        {
+            OleDbConnection cn = new conexion().newcon();
+            try
+            {
+                cn.Open();
+                OleDbCommand cm = new OleDbCommand("delete from plato where id_plato=?");
+                cm.Parameters.AddWithValue("id_plato", id);
+                cm.Connection = cn;
+                cm.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

@@ -16,8 +16,6 @@ namespace delimerced.Platos
     {
         string query = "SELECT * FROM plato";
         OleDbConnection cn = new Clases.conexion().newcon();
-        
-        OleDbCommandBuilder oledbCmdBuilder;
         DataSet ds = new DataSet();
         DataSet changes;
 
@@ -41,9 +39,8 @@ namespace delimerced.Platos
             if (rt == "true")
             {
                 MessageBox.Show("Plato Ingresado Correctamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_name.Text = "";
-                txt_desc.Text = "";
-                txt_price.Text = "";
+                limpiar();
+                filldata();
             }
             else
             {
@@ -62,12 +59,18 @@ namespace delimerced.Platos
             {
                 using (adapter)
                 {
+                    ds.Clear();
                     adapter.Fill(ds);
                     dataGridView1.DataSource = ds.Tables[0];
                 }
             }
         }
-
+        public void limpiar()
+        {
+            txt_name.Text = "";
+            txt_desc.Text = "";
+            txt_price.Text = "";
+        }
         private void btn_update_Click(object sender, EventArgs e)
         {
             try
@@ -80,12 +83,35 @@ namespace delimerced.Platos
                     adapter.Update(ds.Tables[0]);
                 }
                 ds.AcceptChanges();
-                MessageBox.Show("Cambios guardados exitosamente","DELI MERCED", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Cambios guardados exitosamente.","DELI MERCED", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            int id_pl = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            Clases.class_platos platos = new Clases.class_platos();
+
+
+            if (platos.borrar_plato(id_pl) == true)
+            {
+                MessageBox.Show("Plato eliminado correctamente!", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                filldata();
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error. Intentelo de nuevo", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txt_clear_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }
