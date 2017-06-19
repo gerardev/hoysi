@@ -19,8 +19,8 @@ namespace delimerced
 
         private void button1_Click(object sender, EventArgs e)
         {
-            form_evento evento = new form_evento();
-            evento.Show();
+            //form_evento evento = new form_evento();
+            //evento.Show();
         }
 
         private void btn_platos_Click(object sender, EventArgs e)

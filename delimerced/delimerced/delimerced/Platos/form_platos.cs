@@ -17,11 +17,9 @@ namespace delimerced.Platos
         string query = "SELECT * FROM plato";
         OleDbConnection cn = new Clases.conexion().newcon();
         
-        //OleDbCommandBuilder oledbCmdBuilder =;
+        OleDbCommandBuilder oledbCmdBuilder;
         DataSet ds = new DataSet();
         DataSet changes;
-        int i;
-        string Sql;
 
 
         OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:/hoysi/delimerced/delimerced/delimerced/bd/delimerced.mdb;Persist Security Info=True");
@@ -79,10 +77,10 @@ namespace delimerced.Platos
                 changes = ds.GetChanges();
                 if (changes != null)
                 {
-                   // oledbAdapter.Update(ds.Tables[0]);
+                    adapter.Update(ds.Tables[0]);
                 }
                 ds.AcceptChanges();
-                MessageBox.Show("Save changes");
+                MessageBox.Show("Cambios guardados exitosamente","DELI MERCED", MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
