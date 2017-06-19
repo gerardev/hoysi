@@ -83,6 +83,12 @@
     <Compile Include="form_login.Designer.cs">
       <DependentUpon>form_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="pedido\form_pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pedido\form_pedidos.Designer.cs">
+      <DependentUpon>form_pedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="plato\form_platos.cs">
       <SubType>Form</SubType>
     </Compile>
