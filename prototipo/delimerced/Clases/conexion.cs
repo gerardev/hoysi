@@ -14,7 +14,7 @@ namespace delimerced.Clases
         public OleDbConnection con;
         public OleDbConnection newcon()
         {
-            string ds = "C:/hoysi/delimerced/delimerced/delimerced/bd/delimerced.mdb";
+            string ds = "C:/hoysi/prototipo/delimerced/bd/delimerced.mdb";
             string stringConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + ds;
             OleDbConnection con = new OleDbConnection();
             con.ConnectionString = stringConexion;
