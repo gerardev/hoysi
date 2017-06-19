@@ -22,7 +22,7 @@ namespace delimerced.Platos
         DataSet changes;
 
 
-        OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:/hoysi/delimerced/delimerced/delimerced/bd/delimerced.mdb;Persist Security Info=True");
+        OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:/hoysi/prototipo/delimerced/bd/delimerced.mdb;Persist Security Info=True");
         public form_platos()
         {
             InitializeComponent();

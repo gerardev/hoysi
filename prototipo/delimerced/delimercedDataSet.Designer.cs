@@ -46,8 +46,6 @@ namespace delimerced {
         
         private global::System.Data.DataRelation relationdetalle_platdetalle_evento;
         
-        private global::System.Data.DataRelation relationeventodetalle_evento;
-        
         private global::System.Data.DataRelation relationdetalle_platodetalle_pedido;
         
         private global::System.Data.DataRelation relationpedidodetalle_pedido;
@@ -59,6 +57,8 @@ namespace delimerced {
         private global::System.Data.DataRelation relationextrasdetalle_plato;
         
         private global::System.Data.DataRelation relationplatodetalle_plato;
+        
+        private global::System.Data.DataRelation relationeventodetalle_evento;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -427,13 +427,13 @@ namespace delimerced {
                 }
             }
             this.relationdetalle_platdetalle_evento = this.Relations["detalle_platdetalle_evento"];
-            this.relationeventodetalle_evento = this.Relations["eventodetalle_evento"];
             this.relationdetalle_platodetalle_pedido = this.Relations["detalle_platodetalle_pedido"];
             this.relationpedidodetalle_pedido = this.Relations["pedidodetalle_pedido"];
             this.relationextrasdetalle_plat = this.Relations["extrasdetalle_plat"];
             this.relationplatodetalle_plat = this.Relations["platodetalle_plat"];
             this.relationextrasdetalle_plato = this.Relations["extrasdetalle_plato"];
             this.relationplatodetalle_plato = this.Relations["platodetalle_plato"];
+            this.relationeventodetalle_evento = this.Relations["eventodetalle_evento"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -468,10 +468,6 @@ namespace delimerced {
                         this.tabledetalle_plat.Id_platilloColumn}, new global::System.Data.DataColumn[] {
                         this.tabledetalle_evento.id_platilloColumn}, false);
             this.Relations.Add(this.relationdetalle_platdetalle_evento);
-            this.relationeventodetalle_evento = new global::System.Data.DataRelation("eventodetalle_evento", new global::System.Data.DataColumn[] {
-                        this.tableevento.id_eventoColumn}, new global::System.Data.DataColumn[] {
-                        this.tabledetalle_evento.id_eventoColumn}, false);
-            this.Relations.Add(this.relationeventodetalle_evento);
             this.relationdetalle_platodetalle_pedido = new global::System.Data.DataRelation("detalle_platodetalle_pedido", new global::System.Data.DataColumn[] {
                         this.tabledetalle_plato.id_platilloColumn}, new global::System.Data.DataColumn[] {
                         this.tabledetalle_pedido.id_platilloColumn}, false);
@@ -496,6 +492,10 @@ namespace delimerced {
                         this.tableplato.Id_platoColumn}, new global::System.Data.DataColumn[] {
                         this.tabledetalle_plato.id_platoColumn}, false);
             this.Relations.Add(this.relationplatodetalle_plato);
+            this.relationeventodetalle_evento = new global::System.Data.DataRelation("eventodetalle_evento", new global::System.Data.DataColumn[] {
+                        this.tableevento.id_eventoColumn}, new global::System.Data.DataColumn[] {
+                        this.tabledetalle_evento.id_eventoColumn}, false);
+            this.Relations.Add(this.relationeventodetalle_evento);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7261,21 +7261,11 @@ namespace delimerced.delimercedDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id_evento, nombre, fecha, precio, tipo, direccion FROM evento";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO evento\r\n                         (nombre, fecha, precio, tipo, direcc" +
-                "ion)\r\nVALUES        (?, ?, ?, ?, ?)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nombre", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("fecha", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("precio", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(19)), ((byte)(0)), "precio", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("tipo", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tipo", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("direccion", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "direccion", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7518,59 +7508,6 @@ namespace delimerced.delimercedDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int Insertar(string nombre, global::System.Nullable<global::System.DateTime> fecha, global::System.Nullable<decimal> precio, string tipo, string direccion) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
-            if ((nombre == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[0].Value = ((string)(nombre));
-            }
-            if ((fecha.HasValue == true)) {
-                command.Parameters[1].Value = ((System.DateTime)(fecha.Value));
-            }
-            else {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((precio.HasValue == true)) {
-                command.Parameters[2].Value = ((decimal)(precio.Value));
-            }
-            else {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((tipo == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[3].Value = ((string)(tipo));
-            }
-            if ((direccion == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(direccion));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
         }
     }
     
@@ -9475,21 +9412,21 @@ namespace delimerced.delimercedDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._eventoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.evento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._eventoTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._pedidoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.pedido.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._pedidoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._eventoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.evento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._eventoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9571,19 +9508,19 @@ namespace delimerced.delimercedDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._eventoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.evento.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._eventoTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._pedidoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.pedido.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._pedidoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._eventoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.evento.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._eventoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9661,19 +9598,19 @@ namespace delimerced.delimercedDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._pedidoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.pedido.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._pedidoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._eventoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.evento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._eventoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._pedidoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.pedido.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._pedidoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

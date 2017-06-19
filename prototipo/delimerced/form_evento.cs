@@ -7,11 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+
 
 namespace delimerced
 {
     public partial class form_evento : Form
     {
+        string query = "SELECT * FROM evento";
+        OleDbConnection cn = new Clases.conexion().newcon();
+
+        OleDbCommandBuilder oledbCmdBuilder;
+        DataSet ds = new DataSet();
+        DataSet changes;
+
+
+        OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:/hoysi/prototipo/delimerced/bd/delimerced.mdb;Persist Security Info=True");
+       
         public form_evento()
         {
             InitializeComponent();
@@ -56,17 +68,40 @@ namespace delimerced
 
         private void form_evento_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'delimercedDataSet.evento' Puede moverla o quitarla según sea necesario.
-            this.eventoTableAdapter.Fill(this.delimercedDataSet.evento);
-
+            filldata();
         }
 
         private void btnsaveE_Click(object sender, EventArgs e) 
         {
-            decimal precio = Convert.ToDecimal(precioTextBox.Text);
-            DateTime date = Convert.ToDateTime(fechaDateTimePicker.Text);
-            this.eventoTableAdapter.Insertar(nombreTextBox.Text, date, precio, cbtype.Text, direccionTextBox.Text);
-            this.eventoTableAdapter.Fill(this.delimercedDataSet.evento);
+            Clases.class_eventos eventos = new Clases.class_eventos();
+            string add = eventos.agregar_evento(txtNameE.Text, dateE.Text, txtPriceE.Text, cbTypeE.Text, txtAddressE.Text);
+            if (add == "true")
+            {
+                MessageBox.Show("Evento ingresado correctamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNameE.Text = "";
+                dateE.Text = "";
+                txtPriceE.Text = "";
+                cbTypeE.Text = "";
+                txtAddressE.Text = "";
+            }
+            else
+            {
+                MessageBox.Show(add, "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        public void filldata()
+        {
+
+            OleDbDataAdapter adapter = new OleDbDataAdapter(query, cn);
+            using (OleDbConnection cn = new Clases.conexion().newcon())
+            {
+                using (adapter)
+                {
+                    adapter.Fill(ds);
+                    eventoDataGridView.DataSource = ds.Tables[0];
+                }
+            }
         }
 
         private void btnDeleteE_Click(object sender, EventArgs e)

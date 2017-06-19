@@ -46,10 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\class_eventos.cs" />
     <Compile Include="Clases\class_login.cs" />
     <Compile Include="Clases\class_platos.cs" />
     <Compile Include="Clases\conexion.cs" />
     <Compile Include="Clases\validaciones.cs" />
+    <Compile Include="delimercedDataSet.cs">
+      <DependentUpon>delimercedDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="delimercedDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
