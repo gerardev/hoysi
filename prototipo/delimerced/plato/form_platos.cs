@@ -40,7 +40,7 @@ namespace delimerced.Platos
             string rt = platos.agregar_plato(txt_name.Text, txt_desc.Text, txt_price.Text);
             if (rt == "true")
             {
-                MessageBox.Show("Plato Ingresado Correctamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Plato ingresado correctamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txt_name.Text = "";
                 txt_desc.Text = "";
                 txt_price.Text = "";
