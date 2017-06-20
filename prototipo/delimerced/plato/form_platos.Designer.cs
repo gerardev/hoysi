@@ -38,6 +38,9 @@
             this.txt_new = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_update = new System.Windows.Forms.Button();
+            this.btnDeleteP = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +105,7 @@
             // 
             this.txt_new.Location = new System.Drawing.Point(19, 200);
             this.txt_new.Name = "txt_new";
-            this.txt_new.Size = new System.Drawing.Size(161, 23);
+            this.txt_new.Size = new System.Drawing.Size(84, 23);
             this.txt_new.TabIndex = 7;
             this.txt_new.Text = "Agregar";
             this.txt_new.UseVisualStyleBackColor = true;
@@ -122,19 +125,52 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(211, 200);
+            this.btn_update.Location = new System.Drawing.Point(272, 200);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(348, 23);
+            this.btn_update.Size = new System.Drawing.Size(84, 23);
             this.btn_update.TabIndex = 9;
             this.btn_update.Text = "Actualizar";
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
+            // btnDeleteP
+            // 
+            this.btnDeleteP.Location = new System.Drawing.Point(374, 200);
+            this.btnDeleteP.Name = "btnDeleteP";
+            this.btnDeleteP.Size = new System.Drawing.Size(84, 23);
+            this.btnDeleteP.TabIndex = 10;
+            this.btnDeleteP.Text = "Borrar";
+            this.btnDeleteP.UseVisualStyleBackColor = true;
+            this.btnDeleteP.Click += new System.EventHandler(this.btnDeleteP_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(475, 200);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(84, 23);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnClean
+            // 
+            this.btnClean.Location = new System.Drawing.Point(123, 200);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(100, 23);
+            this.btnClean.TabIndex = 12;
+            this.btnClean.Text = "Limpiar formulario";
+            this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click_1);
+            // 
             // form_platos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 244);
+            this.ClientSize = new System.Drawing.Size(582, 233);
+            this.Controls.Add(this.btnClean);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnDeleteP);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_new);
@@ -167,5 +203,8 @@
         private System.Windows.Forms.Button txt_new;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btnDeleteP;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClean;
     }
 }

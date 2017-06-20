@@ -91,6 +91,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_inicio";
             this.Text = "DELI MERCED";
+            this.Load += new System.EventHandler(this.form_inicio_Load);
             this.ResumeLayout(false);
 
         }

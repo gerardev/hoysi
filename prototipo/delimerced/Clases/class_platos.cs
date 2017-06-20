@@ -22,7 +22,7 @@ namespace delimerced.Clases
                 {
                     if (vali.notempty(descr) == true)
                     {
-                        if ((vali.notempty(price) == true) && (vali.onlynumbers(price) == true) && (vali.separator(price)))
+                        if (vali.notempty(price) == true)
                         {   
                             double precio = Convert.ToDouble(price);
                             using (OleDbCommand command = new OleDbCommand())
@@ -74,6 +74,28 @@ namespace delimerced.Clases
             catch (Exception ex)
             {
                 return "false";
+            }
+        }
+
+        public bool borrar_plato(int id)
+        {
+            OleDbConnection cn = new conexion().newcon();
+            try
+            {
+                cn.Open();
+                OleDbCommand cm = new OleDbCommand("delete from plato where id_plato=?");
+                cm.Parameters.AddWithValue("id_plato", id);
+                cm.Connection = cn;
+                cm.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                cn.Close();
             }
         }
     }

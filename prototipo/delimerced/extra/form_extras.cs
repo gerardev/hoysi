@@ -45,15 +45,20 @@ namespace delimerced
             if (add == "true")
             {
                 MessageBox.Show("Extra ingresado correctamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNameEx.Text = "";
-                txtDescEx.Text = "";
-                txtPriceEx.Text = "";
+                filldata();
             }
             else
             {
                 MessageBox.Show(add, "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+        }
+
+        public void limpiar()
+        {
+            txtNameEx.Text = "";
+            txtDescEx.Text = "";
+            txtPriceEx.Text = "";
         }
 
         public void filldata()
@@ -64,6 +69,7 @@ namespace delimerced
             {
                 using (adapter)
                 {
+                    ds.Clear();
                     adapter.Fill(ds);
                     dataGridViewExtras.DataSource = ds.Tables[0];
                 }
@@ -89,6 +95,33 @@ namespace delimerced
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnDelEx_Click(object sender, EventArgs e)
+        {
+            int id_ex = Convert.ToInt16(dataGridViewExtras.CurrentRow.Cells[0].Value.ToString());
+            Clases.class_extras extras = new Clases.class_extras();
+
+
+            if (extras.borrar_extra(id_ex) == true)
+            {
+                MessageBox.Show("Extra eliminado correctamente!", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                filldata();
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error. Intentelo de nuevo", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

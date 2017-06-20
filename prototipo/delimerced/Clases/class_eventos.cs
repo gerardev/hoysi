@@ -22,7 +22,7 @@ namespace delimerced.Clases
                 {
                     if (vali.notempty(date) == true)
                     {
-                        if ((vali.notempty(price) == true) && (vali.onlynumbers(price) == true) && (vali.separator(price)))
+                        if (vali.notempty(price) == true)
                         {
                             if (vali.notempty(type) == true)
                             {
@@ -93,6 +93,28 @@ namespace delimerced.Clases
             catch (Exception ex)
             {
                 return "false2";
+            }
+        }
+
+        public bool borrar_evento(int id)
+        {
+            OleDbConnection cn = new conexion().newcon();
+            try
+            {
+                cn.Open();
+                OleDbCommand cm = new OleDbCommand("delete from evento where id_evento=?");
+                cm.Parameters.AddWithValue("id_evento", id);
+                cm.Connection = cn;
+                cm.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                cn.Close();
             }
         }
     }

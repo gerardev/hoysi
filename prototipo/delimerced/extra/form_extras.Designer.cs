@@ -40,6 +40,7 @@
             this.btnUpEx = new System.Windows.Forms.Button();
             this.btnDelEx = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +114,7 @@
             // 
             this.btnAddEx.Location = new System.Drawing.Point(15, 205);
             this.btnAddEx.Name = "btnAddEx";
-            this.btnAddEx.Size = new System.Drawing.Size(127, 23);
+            this.btnAddEx.Size = new System.Drawing.Size(83, 23);
             this.btnAddEx.TabIndex = 8;
             this.btnAddEx.Text = "Agregar";
             this.btnAddEx.UseVisualStyleBackColor = true;
@@ -121,9 +122,9 @@
             // 
             // btnUpEx
             // 
-            this.btnUpEx.Location = new System.Drawing.Point(164, 205);
+            this.btnUpEx.Location = new System.Drawing.Point(267, 205);
             this.btnUpEx.Name = "btnUpEx";
-            this.btnUpEx.Size = new System.Drawing.Size(153, 23);
+            this.btnUpEx.Size = new System.Drawing.Size(89, 23);
             this.btnUpEx.TabIndex = 9;
             this.btnUpEx.Text = "Actualizar";
             this.btnUpEx.UseVisualStyleBackColor = true;
@@ -131,27 +132,40 @@
             // 
             // btnDelEx
             // 
-            this.btnDelEx.Location = new System.Drawing.Point(342, 205);
+            this.btnDelEx.Location = new System.Drawing.Point(389, 205);
             this.btnDelEx.Name = "btnDelEx";
-            this.btnDelEx.Size = new System.Drawing.Size(153, 23);
+            this.btnDelEx.Size = new System.Drawing.Size(82, 23);
             this.btnDelEx.TabIndex = 10;
-            this.btnDelEx.Text = "Eliminar";
+            this.btnDelEx.Text = "Borrar";
             this.btnDelEx.UseVisualStyleBackColor = true;
+            this.btnDelEx.Click += new System.EventHandler(this.btnDelEx_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(507, 242);
+            this.btnCancel.Location = new System.Drawing.Point(506, 205);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnClean
+            // 
+            this.btnClean.Location = new System.Drawing.Point(129, 205);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(97, 23);
+            this.btnClean.TabIndex = 12;
+            this.btnClean.Text = "Limpiar formulario";
+            this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // form_extras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 267);
+            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelEx);
             this.Controls.Add(this.btnUpEx);
@@ -187,5 +201,6 @@
         private System.Windows.Forms.Button btnUpEx;
         private System.Windows.Forms.Button btnDelEx;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClean;
     }
 }

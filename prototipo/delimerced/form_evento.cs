@@ -78,16 +78,21 @@ namespace delimerced
             if (add == "true")
             {
                 MessageBox.Show("Evento ingresado correctamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNameE.Text = "";
-                dateE.Text = "";
-                txtPriceE.Text = "";
-                cbTypeE.Text = "";
-                txtAddressE.Text = "";
+                filldata();
             }
             else
             {
                 MessageBox.Show(add, "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        public void limpiar()
+        {
+            txtNameE.Text = "";
+            dateE.Text = "";
+            txtPriceE.Text = "";
+            cbTypeE.Text = "";
+            txtAddressE.Text = "";
         }
 
         public void filldata()
@@ -106,6 +111,19 @@ namespace delimerced
 
         private void btnDeleteE_Click(object sender, EventArgs e)
         {
+            int id_ev = Convert.ToInt16(eventoDataGridView.CurrentRow.Cells[0].Value.ToString());
+            Clases.class_eventos eventos = new Clases.class_eventos();
+
+
+            if (eventos.borrar_evento(id_ev) == true)
+            {
+                MessageBox.Show("Evento eliminado correctamente!", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                filldata();
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error. Intentelo de nuevo", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnEditE_Click(object sender, EventArgs e)
@@ -126,6 +144,16 @@ namespace delimerced
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void txtPriceE_TextChanged_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

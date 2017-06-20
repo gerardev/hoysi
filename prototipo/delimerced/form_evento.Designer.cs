@@ -56,6 +56,7 @@
             this.dateE = new System.Windows.Forms.DateTimePicker();
             this.txtPriceE = new System.Windows.Forms.TextBox();
             this.txtAddressE = new System.Windows.Forms.TextBox();
+            this.btnClean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eventoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delimercedDataSet)).BeginInit();
@@ -118,7 +119,7 @@
             // 
             // btncancel
             // 
-            this.btncancel.Location = new System.Drawing.Point(581, 379);
+            this.btncancel.Location = new System.Drawing.Point(597, 362);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(75, 23);
             this.btncancel.TabIndex = 11;
@@ -128,7 +129,7 @@
             // 
             // btnreportE
             // 
-            this.btnreportE.Location = new System.Drawing.Point(406, 379);
+            this.btnreportE.Location = new System.Drawing.Point(488, 362);
             this.btnreportE.Name = "btnreportE";
             this.btnreportE.Size = new System.Drawing.Size(90, 23);
             this.btnreportE.TabIndex = 12;
@@ -204,7 +205,7 @@
             this.btnsaveE.Name = "btnsaveE";
             this.btnsaveE.Size = new System.Drawing.Size(92, 23);
             this.btnsaveE.TabIndex = 15;
-            this.btnsaveE.Text = "Guardar evento";
+            this.btnsaveE.Text = "Guardar";
             this.btnsaveE.UseVisualStyleBackColor = true;
             this.btnsaveE.Click += new System.EventHandler(this.btnsaveE_Click);
             // 
@@ -240,21 +241,21 @@
             // 
             // btnDeleteE
             // 
-            this.btnDeleteE.Location = new System.Drawing.Point(36, 391);
+            this.btnDeleteE.Location = new System.Drawing.Point(370, 362);
             this.btnDeleteE.Name = "btnDeleteE";
             this.btnDeleteE.Size = new System.Drawing.Size(92, 23);
             this.btnDeleteE.TabIndex = 22;
-            this.btnDeleteE.Text = "Borrar evento";
+            this.btnDeleteE.Text = "Borrar ";
             this.btnDeleteE.UseVisualStyleBackColor = true;
             this.btnDeleteE.Click += new System.EventHandler(this.btnDeleteE_Click);
             // 
             // btnEditE
             // 
-            this.btnEditE.Location = new System.Drawing.Point(134, 362);
+            this.btnEditE.Location = new System.Drawing.Point(255, 362);
             this.btnEditE.Name = "btnEditE";
-            this.btnEditE.Size = new System.Drawing.Size(92, 23);
+            this.btnEditE.Size = new System.Drawing.Size(98, 23);
             this.btnEditE.TabIndex = 24;
-            this.btnEditE.Text = "Editar evento";
+            this.btnEditE.Text = "Actualizar ";
             this.btnEditE.UseVisualStyleBackColor = true;
             this.btnEditE.Click += new System.EventHandler(this.btnEditE_Click);
             // 
@@ -278,6 +279,7 @@
             this.txtPriceE.Name = "txtPriceE";
             this.txtPriceE.Size = new System.Drawing.Size(100, 20);
             this.txtPriceE.TabIndex = 27;
+            this.txtPriceE.TextChanged += new System.EventHandler(this.txtPriceE_TextChanged_1);
             // 
             // txtAddressE
             // 
@@ -286,11 +288,22 @@
             this.txtAddressE.Size = new System.Drawing.Size(328, 20);
             this.txtAddressE.TabIndex = 28;
             // 
+            // btnClean
+            // 
+            this.btnClean.Location = new System.Drawing.Point(134, 362);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(98, 23);
+            this.btnClean.TabIndex = 29;
+            this.btnClean.Text = "Limpiar formulario";
+            this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
+            // 
             // form_evento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 469);
+            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.txtAddressE);
             this.Controls.Add(this.txtPriceE);
             this.Controls.Add(this.dateE);
@@ -348,5 +361,6 @@
         private System.Windows.Forms.DateTimePicker dateE;
         private System.Windows.Forms.TextBox txtPriceE;
         private System.Windows.Forms.TextBox txtAddressE;
+        private System.Windows.Forms.Button btnClean;
     }
 }

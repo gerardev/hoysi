@@ -34,5 +34,10 @@ namespace delimerced
             form_extras extras = new form_extras();
             extras.Show();
         }
+
+        private void form_inicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
