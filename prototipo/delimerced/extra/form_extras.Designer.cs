@@ -127,6 +127,7 @@
             this.btnUpEx.TabIndex = 9;
             this.btnUpEx.Text = "Actualizar";
             this.btnUpEx.UseVisualStyleBackColor = true;
+            this.btnUpEx.Click += new System.EventHandler(this.btnUpEx_Click);
             // 
             // btnDelEx
             // 
