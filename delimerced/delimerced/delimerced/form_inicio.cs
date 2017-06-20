@@ -28,5 +28,11 @@ namespace delimerced
             Platos.form_platos platos = new Platos.form_platos();
             platos.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            pedidos.form_pedidos ped = new pedidos.form_pedidos();
+            ped.Show();
+        }
     }
 }
