@@ -22,7 +22,7 @@ namespace delimerced.Clases
                 {
                     if (vali.notempty(date) == true)
                     {
-                        if (vali.notempty(price) == true)
+                        if ((vali.notempty(price) == true) && (vali.onlynumbers(price) == true))
                         {
                             if (vali.notempty(type) == true)
                             {

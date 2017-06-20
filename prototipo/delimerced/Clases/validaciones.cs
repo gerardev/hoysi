@@ -21,6 +21,19 @@ namespace delimerced.Clases
             }
         }
 
+        public bool onlynumbers(string texto)
+        {
+            bool result = texto.All(Char.IsNumber);
+            if (result == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool onlyletters(string texto)
         {
             bool result = texto.All(Char.IsLetter);
