@@ -22,7 +22,7 @@ namespace delimerced.Clases
                 {
                     if (vali.notempty(descr) == true)
                     {
-                        if ((vali.notempty(price) == true) && (vali.onlynumbers(price) == true))
+                        if ((vali.notempty(price) == true) && (vali.onlynumbers(price) == true) && (vali.separator(price)))
                         {   
                             double precio = Convert.ToDouble(price);
                             using (OleDbCommand command = new OleDbCommand())

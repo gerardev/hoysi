@@ -21,6 +21,19 @@ namespace delimerced.Clases
             }
         }
 
+        public bool separator(string texto)
+        {
+            bool result = texto.All(Char.IsSeparator);
+            if (result == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool onlynumbers(string texto)
         {
             bool result = texto.All(Char.IsNumber);
