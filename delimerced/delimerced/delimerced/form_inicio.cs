@@ -19,8 +19,7 @@ namespace delimerced
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //form_evento evento = new form_evento();
-            //evento.Show();
+            
         }
 
         private void btn_platos_Click(object sender, EventArgs e)
@@ -31,14 +30,20 @@ namespace delimerced
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            pedidos.form_pedidos ped = new pedidos.form_pedidos();
-            ped.Show();
+            Extras.form_extras extras = new Extras.form_extras();
+            extras.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             form_acerca acerca = new form_acerca();
             acerca.Show();
+        }
+
+        private void btn_pedidos_Click(object sender, EventArgs e)
+        {
+            pedidos.form_pedidos ped = new pedidos.form_pedidos();
+            ped.Show();
         }
     }
 }

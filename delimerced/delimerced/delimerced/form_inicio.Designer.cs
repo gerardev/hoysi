@@ -41,7 +41,7 @@
             this.btn_eventos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_eventos.BackgroundImage")));
             this.btn_eventos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_eventos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_eventos.Location = new System.Drawing.Point(12, 102);
+            this.btn_eventos.Location = new System.Drawing.Point(405, 12);
             this.btn_eventos.Name = "btn_eventos";
             this.btn_eventos.Size = new System.Drawing.Size(125, 84);
             this.btn_eventos.TabIndex = 0;
@@ -57,12 +57,13 @@
             this.btn_pedidos.Size = new System.Drawing.Size(125, 84);
             this.btn_pedidos.TabIndex = 1;
             this.btn_pedidos.UseVisualStyleBackColor = true;
+            this.btn_pedidos.Click += new System.EventHandler(this.btn_pedidos_Click);
             // 
             // btn_platos
             // 
             this.btn_platos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_platos.BackgroundImage")));
             this.btn_platos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_platos.Location = new System.Drawing.Point(12, 192);
+            this.btn_platos.Location = new System.Drawing.Point(274, 12);
             this.btn_platos.Name = "btn_platos";
             this.btn_platos.Size = new System.Drawing.Size(125, 84);
             this.btn_platos.TabIndex = 2;
@@ -82,7 +83,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(275, 13);
+            this.button2.Location = new System.Drawing.Point(648, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -95,7 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(735, 287);
+            this.ClientSize = new System.Drawing.Size(735, 268);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_platos);
