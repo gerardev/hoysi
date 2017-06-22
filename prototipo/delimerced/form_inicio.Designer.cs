@@ -81,7 +81,7 @@
             // 
             // btnAbout
             // 
-            this.btnAbout.Location = new System.Drawing.Point(648, 252);
+            this.btnAbout.Location = new System.Drawing.Point(487, 252);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(75, 23);
             this.btnAbout.TabIndex = 4;
@@ -94,7 +94,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(735, 287);
+            this.ClientSize = new System.Drawing.Size(570, 287);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnExtras);
             this.Controls.Add(this.btn_platos);
