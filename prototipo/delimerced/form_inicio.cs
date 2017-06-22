@@ -39,5 +39,11 @@ namespace delimerced
         {
 
         }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            form_acerca acerca = new form_acerca();
+            acerca.Show();
+        }
     }
 }

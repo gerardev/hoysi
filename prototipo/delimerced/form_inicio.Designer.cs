@@ -33,6 +33,7 @@
             this.btn_pedidos = new System.Windows.Forms.Button();
             this.btn_platos = new System.Windows.Forms.Button();
             this.btnExtras = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_eventos
@@ -78,12 +79,23 @@
             this.btnExtras.UseVisualStyleBackColor = true;
             this.btnExtras.Click += new System.EventHandler(this.btnExtras_Click);
             // 
+            // btnAbout
+            // 
+            this.btnAbout.Location = new System.Drawing.Point(648, 252);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(75, 23);
+            this.btnAbout.TabIndex = 4;
+            this.btnAbout.Text = "Acerca de...";
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
             // form_inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(735, 287);
+            this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnExtras);
             this.Controls.Add(this.btn_platos);
             this.Controls.Add(this.btn_pedidos);
@@ -102,5 +114,6 @@
         private System.Windows.Forms.Button btn_pedidos;
         private System.Windows.Forms.Button btn_platos;
         private System.Windows.Forms.Button btnExtras;
+        private System.Windows.Forms.Button btnAbout;
     }
 }
