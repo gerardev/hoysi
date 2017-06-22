@@ -34,5 +34,10 @@ namespace delimerced
             pedidos.form_pedidos ped = new pedidos.form_pedidos();
             ped.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

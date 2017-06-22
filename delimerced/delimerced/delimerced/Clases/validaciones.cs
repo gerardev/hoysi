@@ -8,7 +8,6 @@ namespace delimerced.Clases
 {
     class validaciones
     {
-
         public bool notempty(string texto)
         {
             if (texto == "")
@@ -18,6 +17,45 @@ namespace delimerced.Clases
             else
             {
                 return true;
+            }
+        }
+
+        public bool punctuation(string texto)
+        {
+            bool result = texto.All(Char.IsPunctuation);
+            if (result == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool separator(string texto)
+        {
+            bool result = texto.All(Char.IsSeparator);
+            if (result == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool onlynumbers(string texto)
+        {
+            bool result = texto.All(Char.IsNumber);
+            if (result == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 

@@ -23,8 +23,7 @@ namespace delimerced.Clases
                     if (vali.notempty(descr) == true)
                     {
                         if (vali.notempty(price) == true)
-                        {
-                            
+                        {   
                             double precio = Convert.ToDouble(price);
                             using (OleDbCommand command = new OleDbCommand())
                             {
@@ -77,6 +76,7 @@ namespace delimerced.Clases
                 return "false";
             }
         }
+
         public bool borrar_plato(int id)
         {
             OleDbConnection cn = new conexion().newcon();

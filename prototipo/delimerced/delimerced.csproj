@@ -49,6 +49,7 @@
     <Compile Include="Clases\class_eventos.cs" />
     <Compile Include="Clases\class_extras.cs" />
     <Compile Include="Clases\class_login.cs" />
+    <Compile Include="Clases\class_pedidos.cs" />
     <Compile Include="Clases\class_platos.cs" />
     <Compile Include="Clases\conexion.cs" />
     <Compile Include="Clases\validaciones.cs" />
