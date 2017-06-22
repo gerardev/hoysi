@@ -37,7 +37,8 @@ namespace delimerced
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            form_acerca acerca = new form_acerca();
+            acerca.Show();
         }
     }
 }
