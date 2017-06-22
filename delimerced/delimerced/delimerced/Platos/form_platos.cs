@@ -16,6 +16,8 @@ namespace delimerced.Platos
     {
         string query = "SELECT * FROM plato";
         OleDbConnection cn = new Clases.conexion().newcon();
+        
+        OleDbCommandBuilder oledbCmdBuilder;
         DataSet ds = new DataSet();
         DataSet changes;
 
@@ -29,7 +31,6 @@ namespace delimerced.Platos
         private void form_platos_Load(object sender, EventArgs e)
         {
             filldata();
-
         }
 
         private void txt_new_Click(object sender, EventArgs e)
@@ -38,8 +39,7 @@ namespace delimerced.Platos
             string rt = platos.agregar_plato(txt_name.Text, txt_desc.Text, txt_price.Text);
             if (rt == "true")
             {
-                MessageBox.Show("Plato Ingresado Correctamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limpiar();
+                MessageBox.Show("Plato ingresado correctamente", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 filldata();
             }
             else
@@ -47,10 +47,15 @@ namespace delimerced.Platos
                 MessageBox.Show(rt, "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-
-
-
         }
+
+        public void limpiar()
+        {
+            txt_name.Text = "";
+            txt_desc.Text = "";
+            txt_price.Text = "";
+        }
+
         public void filldata()
         {
 
@@ -65,12 +70,7 @@ namespace delimerced.Platos
                 }
             }
         }
-        public void limpiar()
-        {
-            txt_name.Text = "";
-            txt_desc.Text = "";
-            txt_price.Text = "";
-        }
+
         private void btn_update_Click(object sender, EventArgs e)
         {
             try
@@ -83,8 +83,7 @@ namespace delimerced.Platos
                     adapter.Update(ds.Tables[0]);
                 }
                 ds.AcceptChanges();
-                MessageBox.Show("Cambios guardados exitosamente.","DELI MERCED", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                
+                MessageBox.Show("Cambios guardados exitosamente","DELI MERCED", MessageBoxButtons.OK,MessageBoxIcon.Information);              
             }
             catch (Exception ex)
             {
@@ -92,7 +91,12 @@ namespace delimerced.Platos
             }
         }
 
-        private void btn_delete_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnDeleteP_Click(object sender, EventArgs e)
         {
             int id_pl = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             Clases.class_platos platos = new Clases.class_platos();
@@ -109,9 +113,24 @@ namespace delimerced.Platos
             }
         }
 
-        private void txt_clear_Click(object sender, EventArgs e)
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClean_Click_1(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

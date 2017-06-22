@@ -30,7 +30,7 @@ namespace delimerced
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Extras.form_extras extras = new Extras.form_extras();
+            form_extras extras = new form_extras();
             extras.Show();
         }
 
