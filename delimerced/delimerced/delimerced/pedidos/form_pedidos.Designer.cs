@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblid = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datapedidos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             this.datapedidos.BackgroundColor = System.Drawing.Color.White;
             this.datapedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datapedidos.Enabled = false;
-            this.datapedidos.Location = new System.Drawing.Point(16, 189);
+            this.datapedidos.Location = new System.Drawing.Point(16, 116);
             this.datapedidos.Name = "datapedidos";
             this.datapedidos.Size = new System.Drawing.Size(483, 334);
             this.datapedidos.TabIndex = 3;
@@ -155,12 +156,26 @@
             this.lblid.Size = new System.Drawing.Size(0, 13);
             this.lblid.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(514, 116);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Actualizar vista";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // form_pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(687, 120);
+            this.ClientSize = new System.Drawing.Size(687, 541);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -195,5 +210,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.Button button1;
     }
 }

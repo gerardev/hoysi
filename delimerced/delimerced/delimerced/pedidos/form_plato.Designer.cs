@@ -136,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 265);
+            this.ClientSize = new System.Drawing.Size(378, 265);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.cbextras);
             this.Controls.Add(this.btn_limpiar);
@@ -149,7 +149,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_plato";
-            this.Text = "form_plato";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.form_plato_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

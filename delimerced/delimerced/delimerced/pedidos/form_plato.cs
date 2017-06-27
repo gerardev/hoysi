@@ -89,7 +89,8 @@ namespace delimerced.pedidos
             string value = cbplatos.Text;
             if (idplato(value) > 0)
             {
-                int id = idplato(value);
+                int id = Convert.ToInt16(Idpedido);
+                int idp = idplato(value);
                 string extrav = cbextras.Text;
                 if (idextra(extrav) > 0)
                 {
@@ -99,7 +100,7 @@ namespace delimerced.pedidos
                     {
                         int num = Convert.ToInt16(txt_cantidad.Text);
                         Clases.class_pedidos ped = new Clases.class_pedidos();
-                        if (ped.agregarplato(Convert.ToInt16(Idpedido), id, idex, num) == true)
+                        if (ped.agregarplato(Convert.ToInt32(Idpedido.ToString()), idp, idex, num) == true)
                         {
                             MessageBox.Show("Platos ingresados correctamente");
                             this.Hide();
@@ -107,9 +108,8 @@ namespace delimerced.pedidos
                         }
                         else
                         {
-                            MessageBox.Show("nope");
+                            MessageBox.Show(":(");
                         }
-
                     }
                     else
                     {
