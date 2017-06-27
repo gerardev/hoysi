@@ -112,7 +112,7 @@ namespace delimerced.pedidos
                     datapedidos.Columns[2].Name = "Cantidad de platos";
                     datapedidos.Columns[3].Name = "Precio";
                     cn.Open();
-                    string query1 = "SELECT id_plato, id_extra, num FROM detalle_plato WHERE id_pedido=" + lblid.Text;
+                    string query1 = "SELECT id_plato, id_extra, num FROM detalle_plato WHERE id_pedido =" + lblid.Text;
 
                     try
                     {
@@ -130,7 +130,7 @@ namespace delimerced.pedidos
 
                             OleDbCommand cm2 = new OleDbCommand();
                             cm2.Connection = cn;
-                            string query2 = "SELECT nombre, precio FROM plato WHERE Id_plato" + id_plato;
+                            string query2 = "SELECT nombre, precio FROM plato WHERE Id_plato=" + id_plato;
                             cm2.CommandText = query2;
                             OleDbDataReader r2 = cm2.ExecuteReader();
                             r2.Read();
