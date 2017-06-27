@@ -29,24 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_inicio));
-            this.btn_eventos = new System.Windows.Forms.Button();
             this.btn_pedidos = new System.Windows.Forms.Button();
             this.btn_platos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btn_eventos
-            // 
-            this.btn_eventos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_eventos.BackgroundImage")));
-            this.btn_eventos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eventos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_eventos.Location = new System.Drawing.Point(405, 12);
-            this.btn_eventos.Name = "btn_eventos";
-            this.btn_eventos.Size = new System.Drawing.Size(125, 84);
-            this.btn_eventos.TabIndex = 0;
-            this.btn_eventos.UseVisualStyleBackColor = true;
-            this.btn_eventos.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_pedidos
             // 
@@ -63,7 +50,7 @@
             // 
             this.btn_platos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_platos.BackgroundImage")));
             this.btn_platos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_platos.Location = new System.Drawing.Point(274, 12);
+            this.btn_platos.Location = new System.Drawing.Point(143, 12);
             this.btn_platos.Name = "btn_platos";
             this.btn_platos.Size = new System.Drawing.Size(125, 84);
             this.btn_platos.TabIndex = 2;
@@ -74,7 +61,7 @@
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(143, 12);
+            this.button1.Location = new System.Drawing.Point(12, 102);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 84);
             this.button1.TabIndex = 3;
@@ -83,7 +70,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(648, 12);
+            this.button2.Location = new System.Drawing.Point(193, 163);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -96,12 +83,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(735, 268);
+            this.ClientSize = new System.Drawing.Size(281, 200);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_platos);
             this.Controls.Add(this.btn_pedidos);
-            this.Controls.Add(this.btn_eventos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_inicio";
             this.Text = "DELI MERCED";
@@ -110,8 +96,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_eventos;
         private System.Windows.Forms.Button btn_pedidos;
         private System.Windows.Forms.Button btn_platos;
         private System.Windows.Forms.Button button1;

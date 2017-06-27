@@ -89,7 +89,7 @@ namespace delimerced.pedidos
             string value = cbplatos.Text;
             if (idplato(value) > 0)
             {
-                int id = Convert.ToInt16(Idpedido);
+                int id = Convert.ToInt32(Idpedido.ToString());
                 int idp = idplato(value);
                 string extrav = cbextras.Text;
                 if (idextra(extrav) > 0)

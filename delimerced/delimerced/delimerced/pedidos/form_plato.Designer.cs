@@ -44,6 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
@@ -53,6 +54,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(41, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
@@ -72,6 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(41, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 13);
@@ -81,6 +84,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(41, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
@@ -97,6 +101,7 @@
             // 
             // btn_agregar
             // 
+            this.btn_agregar.ForeColor = System.Drawing.Color.Black;
             this.btn_agregar.Location = new System.Drawing.Point(44, 169);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(286, 23);
@@ -107,6 +112,7 @@
             // 
             // btn_limpiar
             // 
+            this.btn_limpiar.ForeColor = System.Drawing.Color.Black;
             this.btn_limpiar.Location = new System.Drawing.Point(44, 201);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(286, 23);
@@ -136,6 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(378, 265);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.cbextras);
@@ -147,6 +154,7 @@
             this.Controls.Add(this.cbplatos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_plato";
             this.Text = " ";

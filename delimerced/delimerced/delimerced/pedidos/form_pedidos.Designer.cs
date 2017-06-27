@@ -100,7 +100,7 @@
             this.btn_salir.BackColor = System.Drawing.Color.Black;
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.ForeColor = System.Drawing.Color.White;
-            this.btn_salir.Location = new System.Drawing.Point(514, 86);
+            this.btn_salir.Location = new System.Drawing.Point(514, 116);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(159, 23);
             this.btn_salir.TabIndex = 6;
@@ -121,6 +121,9 @@
             // cbtipo
             // 
             this.cbtipo.FormattingEnabled = true;
+            this.cbtipo.Items.AddRange(new object[] {
+            "A domicilio",
+            "Para comer aquí"});
             this.cbtipo.Location = new System.Drawing.Point(266, 28);
             this.cbtipo.Name = "cbtipo";
             this.cbtipo.Size = new System.Drawing.Size(233, 21);
@@ -161,7 +164,7 @@
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(514, 116);
+            this.button1.Location = new System.Drawing.Point(514, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 23);
             this.button1.TabIndex = 12;

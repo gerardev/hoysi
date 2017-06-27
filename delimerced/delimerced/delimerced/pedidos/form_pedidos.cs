@@ -31,9 +31,17 @@ namespace delimerced.pedidos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            form_plato plato = new form_plato();
-            plato.Idpedido = lblid.Text;
-            plato.Show();
+            if (lblid.Text != "")
+            {
+                form_plato plato = new form_plato();
+                plato.Idpedido = lblid.Text;
+                plato.Show();
+            }
+            else
+            {
+                MessageBox.Show("Antes de conttinuar debe de ingresar la informacion del cliente y dar clic en 'crear pedido'", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
                 
         }
 
@@ -102,6 +110,7 @@ namespace delimerced.pedidos
         }
         public void filldata()
         {
+            datapedidos.Rows.Clear();
             using (OleDbConnection cn = new Clases.conexion().newcon())
             {
                 try
@@ -176,7 +185,15 @@ namespace delimerced.pedidos
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            filldata();
+            if (lblid.Text != "")
+            {
+                filldata();
+            }
+            else
+            {
+                MessageBox.Show("Antes de conttinuar debe de ingresar la informacion del cliente y dar clic en 'crear pedido'", "DELI MERCED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
     }
 }
