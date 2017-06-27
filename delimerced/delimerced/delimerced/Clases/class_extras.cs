@@ -78,7 +78,7 @@ namespace delimerced.Clases
             try
             {
                 cn.Open();
-                OleDbCommand cm = new OleDbCommand("delete from extras where id_extra?");
+                OleDbCommand cm = new OleDbCommand("delete from extras where id_extra=?");
                 cm.Parameters.AddWithValue("id_extra", id);
                 cm.Connection = cn;
                 cm.ExecuteNonQuery();

@@ -208,6 +208,7 @@
             this.Controls.Add(this.txtDescEx);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNameEx);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_extras";
             this.Text = "DELI MERCED";
             this.Load += new System.EventHandler(this.form_extras_Load);
