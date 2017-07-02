@@ -90,7 +90,8 @@
             this.Controls.Add(this.btn_pedidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_inicio";
-            this.Text = "DELI MERCED";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "DELI MERCED - INICIO";
             this.ResumeLayout(false);
 
         }

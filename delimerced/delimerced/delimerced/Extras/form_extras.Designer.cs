@@ -210,7 +210,7 @@
             this.Controls.Add(this.txtNameEx);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_extras";
-            this.Text = "DELI MERCED";
+            this.Text = "DELI MERCED - EXTRAS";
             this.Load += new System.EventHandler(this.form_extras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtras)).EndInit();
             this.ResumeLayout(false);
