@@ -220,7 +220,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "form_platos";
-            this.Text = "DELI MERCED";
+            this.Text = "DELI MERCED - PLATOS";
             this.Load += new System.EventHandler(this.form_platos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
