@@ -26,24 +26,29 @@ namespace delimerced
         {
             Platos.form_platos platos = new Platos.form_platos();
             platos.Show();
+            this.Hide();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             form_extras extras = new form_extras();
             extras.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             form_acerca acerca = new form_acerca();
             acerca.Show();
+
         }
 
         private void btn_pedidos_Click(object sender, EventArgs e)
         {
             pedidos.form_pedidos ped = new pedidos.form_pedidos();
+
             ped.Show();
+            this.Hide();
         }
     }
 }

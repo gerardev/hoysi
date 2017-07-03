@@ -120,6 +120,8 @@ namespace delimerced.Platos
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            form_inicio ini = new form_inicio();
+            ini.Show();
             this.Close();
         }
 

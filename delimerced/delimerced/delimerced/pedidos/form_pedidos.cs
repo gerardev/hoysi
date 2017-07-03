@@ -105,8 +105,9 @@ namespace delimerced.pedidos
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            this.Hide();
+            form_inicio ini = new form_inicio();
+            ini.Show();
+            this.Close();
         }
         public void filldata()
         {
